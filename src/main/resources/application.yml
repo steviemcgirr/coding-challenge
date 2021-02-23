@@ -1,0 +1,28 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type:
+                    descriptor:
+                        sql:
+                            BasicBinder: TRACE
+server:
+    port: 8084
+spring:
+    application:
+        name: customer-service
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        initialization-mode: never
+        password: myegy
+        url: jdbc:mysql://localhost:3306/demo2?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+

@@ -1,0 +1,22 @@
+package com.codewebs.demo.model;
+
+import org.dozer.DozerBeanMapper;
+import org.springframework.stereotype.Component;
+
+@Component
+public class CoffeeMapper {
+
+    final static DozerBeanMapper mapper = new DozerBeanMapper();
+
+    public Coffee dtoToDomain(CoffeeDto coffeeDto) {
+        if (coffeeDto == null) {
+            return null;
+        }
+
+        return mapper.map(coffeeDto, Coffee.class);
+    }
+
+    public CoffeeDto domainToDto(Coffee coffee) {
+        return mapper.map(coffee, CoffeeDto.class);
+    }
+}
