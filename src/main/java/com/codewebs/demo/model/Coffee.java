@@ -31,6 +31,7 @@ public class Coffee {
     @Column(name = "cup_size")
     private String size;
 
+    //test
     @Column(name = "price")
     private double price;
 }
